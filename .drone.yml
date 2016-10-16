@@ -2,7 +2,9 @@ pipeline:
   backend:
     image: golang:1.6
     commands:
-      - export GOBIN=$GOPATH/bin
+      - mkdir release/
+      - export GOBIN=release/
       - go get
       - go build
       - go test
+      - find .

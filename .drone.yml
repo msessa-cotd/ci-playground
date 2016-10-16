@@ -3,7 +3,7 @@ pipeline:
     image: golang:1.6
     commands:
       - mkdir release/
-      - export GOBIN=release/
+      - export GOBIN=`pwd`/release/
       - go get
       - go build
       - go test
